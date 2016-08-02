@@ -1,11 +1,12 @@
 FROM alpine:latest
+MAINTAINER garethflowers
 
 RUN apk update \
     && apk add subversion \
-    && mkdir /var/opt/svn
+    && mkdir -p /var/opt/svn
+
+VOLUME /var/opt/svn
     
 EXPOSE 3690
 
-VOLUME /var/opt/svn
-
-CMD [ "/usr/bin/svnserve", "-d", "-r", "/var/opt/svn" ]
+CMD [ "/usr/bin/svnserve", "--daemon", "--root", "/var/opt/svn" ]
