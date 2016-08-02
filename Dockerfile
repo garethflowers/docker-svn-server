@@ -2,8 +2,9 @@ FROM alpine:latest
 MAINTAINER garethflowers
 
 RUN apk update \
-    && apk add subversion \
-    && mkdir -p /var/opt/svn
+    && apk add subversion
+
+WORKDIR /var/opt/svn
 
 VOLUME /var/opt/svn
     
