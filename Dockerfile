@@ -9,4 +9,4 @@ VOLUME /var/opt/svn
     
 EXPOSE 3690
 
-CMD [ "/usr/bin/svnserve", "--daemon", "--root", "/var/opt/svn" ]
+CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
