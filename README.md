@@ -2,7 +2,7 @@
 
 A simple Subversion server, using `svnserve`
 
-##How to use this image
+## How to use this image
 
 ### Start a Subversion Server instance
 To start a container, with data stored in /home/svn on the host, use the following:
