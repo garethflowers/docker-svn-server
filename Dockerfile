@@ -1,12 +1,12 @@
 FROM alpine:latest
 MAINTAINER garethflowers
 
-RUN apk update \
-    && apk add subversion
+RUN apk add --no-cache subversion && \
+    rm -fr /var/cache/apk/*
 
 WORKDIR /var/opt/svn
 
-VOLUME /var/opt/svn
+VOLUME [ "/var/opt/svn" ]
     
 EXPOSE 3690
 
