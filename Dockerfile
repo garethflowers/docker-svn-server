@@ -1,5 +1,4 @@
 FROM alpine:latest
-MAINTAINER garethflowers
 
 RUN apk add --no-cache subversion && \
     rm -fr /var/cache/apk/*
@@ -7,7 +6,7 @@ RUN apk add --no-cache subversion && \
 WORKDIR /var/opt/svn
 
 VOLUME [ "/var/opt/svn" ]
-    
+
 EXPOSE 3690
 
 CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
