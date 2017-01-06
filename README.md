@@ -1,6 +1,6 @@
 # SVN Server
 
-A simple Subversion server, using `svnserve`
+A simple Subversion server, using `svnserve`.
 
 ## How to use this image
 
@@ -17,8 +17,8 @@ docker run --name some-svn-server -d -v /home/svn:/var/opt/svn \
 
 Use `svnadmin` within your container to create and manage respositories.
 
-For example, to create a repository called `new-repo` in container `some-svn-server`, use the
-following:
+For example, to create a repository called `new-repo` in container
+`some-svn-server`, use the following:
 ```sh
 docker exec -it some-svn-server svnadmin create new-repo
 ```
