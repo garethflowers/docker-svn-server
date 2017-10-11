@@ -1,5 +1,8 @@
 # SVN Server
 
+[![Image Layers](https://images.microbadger.com/badges/image/garethflowers/svn-server.svg)](https://microbadger.com/images/garethflowers/svn-server)
+[![Docker Pulls](https://img.shields.io/docker/pulls/garethflowers/svn-server.svg)](https://store.docker.com/community/images/garethflowers/svn-server)
+
 A simple Subversion server, using `svnserve`.
 
 ## How to use this image
