@@ -13,11 +13,12 @@ A simple Subversion server, using `svnserve`.
 To start a container, with data stored in `/home/svn` on the host, use the
 following:
 ```sh
-docker run --name my-svn-server \
-           --detach \
-           --volume /home/svn:/var/opt/svn \
-           --publish 3690:3690 \
-           garethflowers/svn-server
+docker run \
+	--name my-svn-server \
+	--detach \
+	--volume /home/svn:/var/opt/svn \
+	--publish 3690:3690 \
+	garethflowers/svn-server
 ```
 
 ### Creating a new SVN Repository
@@ -35,5 +36,5 @@ docker exec -it some-svn-server svnadmin create new-repo
 * Apache Subversion is released under the [Apache License][1]
 * This image is released under the [MIT License][2]
 
- [1]: http://www.apache.org/licenses/LICENSE-2.0
- [2]: https://raw.githubusercontent.com/garethflowers/docker-svn-server/master/LICENSE
+	[1]: http://www.apache.org/licenses/LICENSE-2.0
+	[2]: https://raw.githubusercontent.com/garethflowers/docker-svn-server/master/LICENSE
