@@ -33,8 +33,5 @@ docker exec -it some-svn-server svnadmin create new-repo
 
 ## License
 
-* Apache Subversion is released under the [Apache License][1]
-* This image is released under the [MIT License][2]
-
-	[1]: http://www.apache.org/licenses/LICENSE-2.0
-	[2]: https://raw.githubusercontent.com/garethflowers/docker-svn-server/master/LICENSE
+* Apache Subversion is released under the [Apache License](http://www.apache.org/licenses/LICENSE-2.0).
+* This image is released under the [MIT License](https://raw.githubusercontent.com/garethflowers/docker-svn-server/master/LICENSE).
