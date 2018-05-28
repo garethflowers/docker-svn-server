@@ -1,5 +1,9 @@
 language: bash
 
+addons:
+  apt:
+    update: true
+
 services:
   - docker
 
