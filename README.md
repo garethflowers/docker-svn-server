@@ -13,14 +13,14 @@ A simple Subversion server, using `svnserve`.
 To start a container, with data stored in `/home/svn` on the host, use the
 following:
 ```sh
-docker run --name some-svn-server \
+docker run --name my-svn-server \
            --detach \
            --volume /home/svn:/var/opt/svn \
            --publish 3690:3690 \
            garethflowers/svn-server
 ```
 
-### Creating a new Repository
+### Creating a new SVN Repository
 
 Use `svnadmin` within your container to create and manage repositories.
 
