@@ -20,4 +20,4 @@ HEALTHCHECK CMD netstat -ln | grep 3690 || exit 1
 VOLUME [ "/var/opt/svn" ]
 WORKDIR /var/opt/svn
 
-RUN apk add --no-cache subversion
+RUN apk add --no-cache subversion==1.9.7-r0
