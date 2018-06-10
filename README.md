@@ -10,8 +10,7 @@ A simple Subversion server, using `svnserve`.
 
 ### Start a Subversion Server instance
 
-To start a container, with data stored in `/home/svn` on the host, use the
-following:
+To start a container, with data stored in `/home/svn` on the host, use the following:
 ```sh
 docker run \
 	--name my-svn-server \
@@ -25,8 +24,7 @@ docker run \
 
 Use `svnadmin` within your container to create and manage repositories.
 
-For example, to create a repository called `new-repo` in container
-`some-svn-server`, use the following:
+For example, to create a repository called `new-repo` in container `some-svn-server`, use the following:
 ```sh
 docker exec -it some-svn-server svnadmin create new-repo
 ```
