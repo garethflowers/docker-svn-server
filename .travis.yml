@@ -8,8 +8,8 @@ services:
   - docker
 
 install:
-  - docker build -t svn-server .
-  - docker run -d -p 3690:3690 svn-server
+  - docker build --tag svn-server .
+  - docker run --detach --publish 3690:3690 svn-server
 
 script:
   - netstat -ln | grep 3690

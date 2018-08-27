@@ -4,7 +4,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
-	org.label-schema.docker.cmd="docker run -d -p 3690:3690 -v $PWD:/var/opt/svn garethflowers/svn-server" \
+	org.label-schema.docker.cmd="docker run --detach --publish 3690:3690 --volume $PWD:/var/opt/svn garethflowers/svn-server" \
 	org.label-schema.description="SVN Server" \
 	org.label-schema.name="svn-server" \
 	org.label-schema.schema-version="1.0" \
@@ -20,5 +20,5 @@ HEALTHCHECK CMD netstat -ln | grep 3690 || exit 1
 VOLUME [ "/var/opt/svn" ]
 WORKDIR /var/opt/svn
 
-RUN sed -i -e 's/v[[:digit:]]\.[[:digit:]]/edge/g' /etc/apk/repositories \
+RUN sed -i -e "s/v[[:digit:]]\.[[:digit:]]/edge/g" /etc/apk/repositories \
 	&& apk add --no-cache subversion==1.10.0-r0
