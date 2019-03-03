@@ -20,5 +20,4 @@ HEALTHCHECK CMD netstat -ln | grep 3690 || exit 1
 VOLUME [ "/var/opt/svn" ]
 WORKDIR /var/opt/svn
 
-RUN sed -i -e "s/v[[:digit:]]\.[[:digit:]]/edge/g" /etc/apk/repositories \
-	&& apk add --no-cache subversion==1.10.0-r0
+RUN apk add --no-cache subversion==1.10.4-r0
