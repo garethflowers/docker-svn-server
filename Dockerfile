@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -20,4 +20,4 @@ HEALTHCHECK CMD netstat -ln | grep 3690 || exit 1
 VOLUME [ "/var/opt/svn" ]
 WORKDIR /var/opt/svn
 
-RUN apk add --no-cache subversion==1.10.4-r0
+RUN apk add --no-cache subversion==1.11.1-r0
