@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/garethflowers/docker-svn-server.svg?branch=master)](https://travis-ci.org/garethflowers/docker-svn-server) [![Image Layers](https://images.microbadger.com/badges/image/garethflowers/svn-server.svg)](https://microbadger.com/images/garethflowers/svn-server) [![Docker Pulls](https://img.shields.io/docker/pulls/garethflowers/svn-server.svg)](https://store.docker.com/community/images/garethflowers/svn-server)
+[![Build Status](https://travis-ci.org/garethflowers/docker-svn-server.svg?branch=master)](https://travis-ci.org/garethflowers/docker-svn-server) [![Version](https://images.microbadger.com/badges/version/garethflowers/svn-server.svg)](https://microbadger.com/images/garethflowers/svn-server) [![Image Layers](https://images.microbadger.com/badges/image/garethflowers/svn-server.svg)](https://microbadger.com/images/garethflowers/svn-server) [![Docker Pulls](https://img.shields.io/docker/pulls/garethflowers/svn-server.svg)](https://store.docker.com/community/images/garethflowers/svn-server)
 
 # SVN Server
 
