@@ -1,3 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+if [[ $DOCKER_TAG =~ ^(([0-9]+).[0-9]+).[0-9]+$ ]]
+then
+	docker tag $IMAGE_NAME $DOCKER_REPO:${BASH_REMATCH[1]}
+	docker push $DOCKER_REPO:${BASH_REMATCH[1]}
+
+	docker tag $IMAGE_NAME $DOCKER_REPO:${BASH_REMATCH[2]}
+	docker push $DOCKER_REPO:${BASH_REMATCH[2]}
+
+	docker tag $IMAGE_NAME $DOCKER_REPO:latest
+	docker push $DOCKER_REPO:latest
+fi
 
 curl --request POST https://hooks.microbadger.com/images/garethflowers/svn-server/FkVaV8GLQgsGrRycKGa4eMAGC8A=
