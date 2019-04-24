@@ -12,7 +12,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.vcs-ref=$VCS_REF \
 	org.label-schema.vcs-url="https://github.com/garethflowers/docker-svn-server" \
 	org.label-schema.vendor="garethflowers" \
-	org.label-schema.version="1.2.0"
+	org.label-schema.version="1.2.1"
 
 CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
 EXPOSE 3690
