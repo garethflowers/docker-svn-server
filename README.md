@@ -22,9 +22,9 @@ docker run \
 
 Use `svnadmin` within your container to create and manage repositories.
 
-For example, to create a repository called `new-repo` in container `some-svn-server`, use the following:
+For example, to create a repository called `new-repo` in container `my-svn-server`, use the following:
 ```sh
-docker exec -it some-svn-server svnadmin create new-repo
+docker exec -it my-svn-server svnadmin create new-repo
 ```
 
 ## License
