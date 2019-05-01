@@ -12,4 +12,4 @@ then
 	docker push $DOCKER_REPO:latest
 fi
 
-curl --request POST https://hooks.microbadger.com/images/garethflowers/svn-server/FkVaV8GLQgsGrRycKGa4eMAGC8A=
+curl --request POST https://hooks.microbadger.com/images/garethflowers/svn-server/FkVaV8GLQgsGrRycKGa4eMAGC8A= || true
