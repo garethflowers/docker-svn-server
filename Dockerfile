@@ -2,6 +2,7 @@ FROM alpine:3.10.2
 
 ARG BUILD_DATE
 ARG VCS_REF
+ARG VERSION
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.docker.cmd="docker run --detach --publish 3690:3690 --volume $PWD:/var/opt/svn garethflowers/svn-server" \
@@ -12,7 +13,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.vcs-ref=$VCS_REF \
 	org.label-schema.vcs-url="https://github.com/garethflowers/docker-svn-server" \
 	org.label-schema.vendor="garethflowers" \
-	org.label-schema.version="1.2.2"
+	org.label-schema.version=$VERSION
 
 CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
 EXPOSE 3690
