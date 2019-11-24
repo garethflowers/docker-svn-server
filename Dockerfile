@@ -5,8 +5,8 @@ ARG VCS_REF
 ARG VERSION
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
-	org.label-schema.docker.cmd="docker run --detach --publish 3690:3690 --volume $PWD:/var/opt/svn garethflowers/svn-server" \
 	org.label-schema.description="SVN Server" \
+	org.label-schema.docker.cmd="docker run --detach --publish 3690:3690 --volume $PWD:/var/opt/svn garethflowers/svn-server" \
 	org.label-schema.name="svn-server" \
 	org.label-schema.schema-version="1.0" \
 	org.label-schema.url="https://subversion.apache.org" \
