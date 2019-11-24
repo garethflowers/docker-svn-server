@@ -8,8 +8,10 @@ services:
   - docker
 
 install:
-  - docker build --tag svn-server .
-  - docker run --detach --publish 3690:3690 svn-server
+  - export DOCKERFILE_PATH=Dockerfile
+  - export IMAGE_NAME=svn-server
+  - source hooks/build
+  - docker run --detach --publish 3690:3690 $IMAGE_NAME
 
 script:
   - netstat -ln | grep 3690
