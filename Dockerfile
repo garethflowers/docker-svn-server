@@ -1,4 +1,4 @@
-FROM alpine:3.10.3
+FROM alpine:3.11.3
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -22,5 +22,5 @@ VOLUME [ "/var/opt/svn" ]
 WORKDIR /var/opt/svn
 
 RUN apk add --no-cache \
-	subversion==1.12.2-r0 \
+	subversion==1.12.2-r1 \
 	wget==1.20.3-r0
