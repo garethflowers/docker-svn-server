@@ -22,5 +22,5 @@ VOLUME [ "/var/opt/svn" ]
 WORKDIR /var/opt/svn
 
 RUN apk add --no-cache \
-	wget==1.20.3-r0
 	subversion==1.13.0-r2 \
+	wget==1.20.3-r1
