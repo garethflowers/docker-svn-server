@@ -2,7 +2,7 @@
 
 # SVN Server
 
-A simple Subversion server, using `svnserve`.
+A Docker image running a simple Dockerised Subversion server, using `svnserve`.
 
 ## How to use this image
 
