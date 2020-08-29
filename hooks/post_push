@@ -11,5 +11,3 @@ then
 	docker tag $IMAGE_NAME $DOCKER_REPO:latest
 	docker push $DOCKER_REPO:latest
 fi
-
-curl --request POST https://hooks.microbadger.com/images/garethflowers/svn-server/FkVaV8GLQgsGrRycKGa4eMAGC8A= || true
