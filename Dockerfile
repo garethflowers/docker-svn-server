@@ -1,19 +1,11 @@
 FROM alpine:3.12.0
 
-ARG BUILD_DATE
-ARG VCS_REF
-ARG VERSION
-
-LABEL org.label-schema.build-date=$BUILD_DATE \
-	org.label-schema.description="SVN Server" \
-	org.label-schema.docker.cmd="docker run --detach --publish 3690:3690 --volume $PWD:/var/opt/svn garethflowers/svn-server" \
-	org.label-schema.name="svn-server" \
-	org.label-schema.schema-version="1.0" \
-	org.label-schema.url="https://subversion.apache.org" \
-	org.label-schema.vcs-ref=$VCS_REF \
-	org.label-schema.vcs-url="https://github.com/garethflowers/docker-svn-server" \
-	org.label-schema.vendor="garethflowers" \
-	org.label-schema.version=$VERSION
+LABEL org.opencontainers.image.authors="Gareth Flowers" \
+	org.opencontainers.image.description="Subversion Server" \
+	org.opencontainers.image.licenses="MIT" \
+	org.opencontainers.image.title="svn-server" \
+	org.opencontainers.image.url="https://github.com/garethflowers/docker-svn-server" \
+	org.opencontainers.image.vendor="garethflowers"
 
 CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
 EXPOSE 3690
