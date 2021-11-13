@@ -59,4 +59,3 @@ jobs:
           short-description: ${{ github.event.repository.description }}
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-ß
