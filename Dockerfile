@@ -8,4 +8,4 @@ WORKDIR /var/opt/svn
 
 RUN apk add --no-cache \
 	subversion==1.14.2-r0\
-	wget==1.21.1-r1
+	wget==1.21.2-r2
