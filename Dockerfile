@@ -1,4 +1,4 @@
-FROM alpine:3.14.3
+FROM alpine:3.15.4
 
 CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
 EXPOSE 3690
@@ -8,4 +8,4 @@ WORKDIR /var/opt/svn
 
 RUN apk add --no-cache \
 	subversion==1.14.2-r0\
-	wget==1.21.1-r1
+	wget==1.21.2-r2
