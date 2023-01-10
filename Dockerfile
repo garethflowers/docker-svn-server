@@ -1,4 +1,4 @@
-FROM alpine:3.17.0
+FROM alpine:3.17.1
 
 CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
 EXPOSE 3690
