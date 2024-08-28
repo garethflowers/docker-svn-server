@@ -1,6 +1,7 @@
 FROM alpine:3.20.2
 
-CMD [ "/usr/bin/svnserve", "--daemon", "--foreground", "--root", "/var/opt/svn" ]
+COPY docker-entrypoint.sh /
+CMD [ "/docker-entrypoint.sh" ]
 EXPOSE 3690
 HEALTHCHECK CMD netstat -ln | grep 3690 || exit 1
 VOLUME [ "/var/opt/svn" ]
