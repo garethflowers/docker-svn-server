@@ -32,6 +32,33 @@ services:
       - /home/svn:/var/opt/svn
 ```
 
+### Start the Subversion server with custom arguments
+
+To define arguments to be passed to the Subversion server, set the `SVNSERVE_ARGS` environmental variable:
+
+#### ...via `docker run`
+
+```sh
+docker run ... SVNSERVE_ARGS="--option1 value1 --option2 value2" ... garethflowers/svn-server
+```
+
+#### ...via `docker compose`
+
+```sh
+services:
+  svn:
+    image: garethflowers/svn-server
+    environment:
+      - SVNSERVE_ARGS=--option1 value1 --option2 value2
+    ...
+```
+
+### List available command line options
+
+```sh
+docker exec -it CONTAINER_NAME svnserve --help
+```
+
 ### Creating a new SVN Repository
 
 Use `svnadmin` within your container to create and manage repositories.
