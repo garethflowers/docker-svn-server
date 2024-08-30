@@ -12,4 +12,4 @@ RUN apk add --no-cache \
 	wget==1.24.5-r0
 
 COPY docker-entrypoint.sh /
-CMD [ "/docker-entrypoint.sh" ]
+ENTRYPOINT docker-entrypoint.sh
