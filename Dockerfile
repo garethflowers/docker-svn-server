@@ -9,3 +9,6 @@ WORKDIR /var/opt/svn
 RUN apk add --no-cache \
 	subversion==1.14.3-r2 \
 	wget==1.24.5-r0
+
+# 100:101
+USER svn:svnusers
