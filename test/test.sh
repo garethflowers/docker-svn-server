@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
-set -xe
+set -e
+
 export IMAGE_NAME=garethflowers/svn-server
 
-docker build --tag $IMAGE_NAME .
+docker build --tag ${IMAGE_NAME} .
 
-docker run --rm $IMAGE_NAME svn --version
+docker run --rm ${IMAGE_NAME} svn --version
 
 echo "OK"
